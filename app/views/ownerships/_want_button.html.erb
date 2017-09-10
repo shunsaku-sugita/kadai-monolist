@@ -1,6 +1,7 @@
 <% if current_user.want?(item) %>
   <%= form_tag(ownership_path(item.id), method: :delete) do %>
-    <%= hidden_field_tag :item_id, item.id %><%= hidden_field_tag :type, 'Want' %>
+    <%= hidden_field_tag :item_id, item.id %>
+    <%= hidden_field_tag :type, 'Want' %>
     <%= submit_tag 'Want', class: 'btn btn-success' %>
   <% end %>
 <% else %>
