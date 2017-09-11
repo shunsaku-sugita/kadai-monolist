@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'rankings/want'
 
   root to: 'toppages#index'
   
@@ -14,5 +12,6 @@ Rails.application.routes.draw do
   resources :items, only: [:new, :show]
   resources :ownerships, only: [:create, :destroy]
   
-  get 'rankings/want', to:'rankings#wan'
+  get 'rankings/want', to: 'rankings#want'
+  get 'rankings/have', to: 'rankings#have'
 end
